@@ -15,11 +15,16 @@ import java.util.List;
 @RequestMapping("/api/categories")
 public class CategoryController {
 
-    @Autowired
-    CategoryService categoryService;
+
+    private final CategoryService categoryService;
+
+    public CategoryController(CategoryService categoryService) {
+        this.categoryService = categoryService;
+    }
 
     @GetMapping
     public List<Category> getAllCategories() {
-        return categoryService.findAll();
+
+        return categoryService.getAllCategories();
     }
 }
