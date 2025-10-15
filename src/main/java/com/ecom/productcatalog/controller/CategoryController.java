@@ -25,7 +25,4 @@ public class CategoryController {
        return categoryService.getAllCategories();
     }
 
-  
-
-
 }
