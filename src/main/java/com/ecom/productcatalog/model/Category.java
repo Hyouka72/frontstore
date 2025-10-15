@@ -3,6 +3,7 @@ package com.ecom.productcatalog.model;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -16,5 +17,5 @@ public class Category {
     @OneToMany(mappedBy = "category",
     cascade = CascadeType.ALL,
     fetch = FetchType.LAZY)
-    private Set<Product> products;
+    private List<Product> products;
 }
